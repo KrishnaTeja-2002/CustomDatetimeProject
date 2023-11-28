@@ -29,7 +29,7 @@ def test_date_validation_invalid_date():
 
 def test_static_method():
     result = CustomDatetime.static_method()
-    # Add assertions based on the expected behavior of your static method
+    assert result == "Static method executed."
 
 def test_abstract_method():
     with pytest.raises(TypeError):
@@ -39,3 +39,8 @@ def test_custom_exception_handling():
     dt = CustomDatetime(2023, 11, 25)
     result = dt.custom_exception_handling()
     # Add assertions based on the expected behavior of your exception handling method
+
+def test_class_method_example():
+    result = CustomDatetime.class_method_example()
+    assert result == "Class method executed for CustomDatetime."
+print("Thats good all clear")
